@@ -1,17 +1,17 @@
 <?php
 include('simple_html_dom.php');
 
-$html = file_get_html('https://www.w3schools.com/php/default.asp');
+$html = file_get_html('https://www.plazavea.com.pe/leche-uht-gloria-light-pack-3un-x-1l/p');
 
-echo $html->find('title', 0)->plaintext;
+echo 'Product '.$html->find('title', 0)->plaintext;
 
-$list = $html->find('div[class="w3-bar w3-left"]',0);
+// $list = $html->find('div[class="ProductCard__name"]',0);
 
-$list_array = $list->find('a');
+// $list_array = $list->find('h1');
 
-for ( $i = 0; $i < sizeof($list_array); $i++ ){
- echo $list_array[$i]->plaintext;
- echo "<br>";
-}
+// for ( $i = 0; $i < sizeof($list_array); $i++ ){
+//  echo 'Product '.$list_array[$i]->plaintext;
+//  echo "<br>";
+// }
 
 ?>
